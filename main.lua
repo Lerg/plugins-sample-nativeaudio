@@ -111,3 +111,18 @@ widget.newButton{
 		nativeaudio.setSourceOptions(japanId, {volume = 0.5})
 		print('volume 50% japan')
 	end}
+
+widget.newButton{
+	x = xr, y = y + 200,
+	width = w, height = h,
+	label = 'Set Info',
+	onRelease = function()
+		nativeaudio.setInfo{
+			title = 'My Awesome Audio App',
+			image = {
+				filename = 'artwork.jpg'
+				--baseDir = ...
+			}
+		}
+		print('set info')
+	end}
